@@ -1,18 +1,18 @@
 
 
-Feature: Validating Place API's
+Feature: Validating Place API's for Both Add and Delete Requests
 
 
-  @Ignore
-  Scenario: Verify if place is being successfully added using AddPlaceAPI
+@Ignore
+Scenario: Verify if place is being successfully added using AddPlaceAPI
     Given "addPlaceAPI" request Payload
     When user calls "addPlaceAPI" with "POST" https request
     Then the Response should be success with code 200
     And "status" message should be "OK"
     And "scope" in response should be "APP"
 
-  @Ignore
-  Scenario Outline: Verify if place is being successfully added using AddPlaceAPI
+@Ignore
+Scenario Outline: Verify if place is being successfully added using AddPlaceAPI
     Given "addPlaceAPI" request Payload with name "<name>" "<language>" "<address>"
     When user calls "addPlaceAPI" with "POST" https request
     Then the Response should be success with code 200
@@ -37,7 +37,7 @@ Scenario Outline: Verify if place is being successfully added using AddPlaceAPI
     | Test Place | 123 Test Street | English  |
 
 
-  @deletePlace
+@deletePlace
 Scenario: Delete place API functionality
    Given delPlaceAPI request payload
    When user calls "delPlaceAPI" with "DELETE" https request
