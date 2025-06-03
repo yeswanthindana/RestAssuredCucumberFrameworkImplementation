@@ -19,12 +19,14 @@ Scenario Outline: Verify if place is being successfully added using AddPlaceAPI
     And "status" message should be "OK"
     And "scope" in response should be "APP"
         Examples:
-          | name       | address      | language |
-          | Test Place | 123 Test St  | English  |
-          | Demo Place | 456 Demo Ave | French   |
-          | Demo Test  | 457 Demo St  | Japanese |
+          | name         | address      | language |
+          | Test Place   | 123 Test St  | English  |
+          | Demo Place   | 456 Demo Ave | French   |
+          | Demo Test    | 457 Demo St  | Japanese |
+          | Demoess Test   | 457 Demo St  | Thailand |
+          | Demo tesTest | 457 Demo St  | Bnagla   |
 
-@addPlace
+  @addPlace
 Scenario Outline: Verify if place is being successfully added using AddPlaceAPI
     Given "addPlaceAPI" request Payload with name "<name>" "<language>" "<address>"
     When user calls "addPlaceAPI" with "POST" https request
