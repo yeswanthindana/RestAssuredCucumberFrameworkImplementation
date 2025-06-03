@@ -1,0 +1,188 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.389494,
+        "lng": 33.429362
+    },
+    "accuracy": 70,
+    "name": "Frontline house Vizag",
+    "types": [
+        "shot park",
+        "belt shop"
+    ],
+    "phone_number": "(+91) 984 896 3947",
+    "address": "89, Klinkara side layout, cohen 09",
+    "website": "http://fbook.com",
+    "language": "French-IN"
+}
+HTTP/1.1 200 OK
+Date: Tue, 03 Jun 2025 10:40:28 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "ac210862798dd68aeb907e6cb52a1e35",
+    "scope": "APP",
+    "reference": "c11af8904cdc7a7ec79a12f5cd711633c11af8904cdc7a7ec79a12f5cd711633",
+    "id": "c11af8904cdc7a7ec79a12f5cd711633"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.389494,
+        "lng": 33.429362
+    },
+    "accuracy": 70,
+    "name": "Test Place",
+    "types": [
+        "shot park",
+        "belt shop"
+    ],
+    "phone_number": "(+91) 984 896 3947",
+    "address": "123 Test St",
+    "website": "http://fbook.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Tue, 03 Jun 2025 10:40:29 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "1b870851adac7f424c829d2963aefbb7",
+    "scope": "APP",
+    "reference": "71f8da970f1f2f5a3a27dd6d0c1dd62571f8da970f1f2f5a3a27dd6d0c1dd625",
+    "id": "71f8da970f1f2f5a3a27dd6d0c1dd625"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.389494,
+        "lng": 33.429362
+    },
+    "accuracy": 70,
+    "name": "Demo Place",
+    "types": [
+        "shot park",
+        "belt shop"
+    ],
+    "phone_number": "(+91) 984 896 3947",
+    "address": "456 Demo Ave",
+    "website": "http://fbook.com",
+    "language": "French"
+}
+HTTP/1.1 200 OK
+Date: Tue, 03 Jun 2025 10:40:29 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "2270ecffd85221d7a125b76fac0d8262",
+    "scope": "APP",
+    "reference": "c56376ac9d73734513537eacb70108d2c56376ac9d73734513537eacb70108d2",
+    "id": "c56376ac9d73734513537eacb70108d2"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.389494,
+        "lng": 33.429362
+    },
+    "accuracy": 70,
+    "name": "Demo Test",
+    "types": [
+        "shot park",
+        "belt shop"
+    ],
+    "phone_number": "(+91) 984 896 3947",
+    "address": "457 Demo St",
+    "website": "http://fbook.com",
+    "language": "Japanese"
+}
+HTTP/1.1 200 OK
+Date: Tue, 03 Jun 2025 10:40:29 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "8e8a85520466be3c0b389ff4b0799abe",
+    "scope": "APP",
+    "reference": "2dfe160ae4b3f7e50b5ec0eed6fd00e32dfe160ae4b3f7e50b5ec0eed6fd00e3",
+    "id": "2dfe160ae4b3f7e50b5ec0eed6fd00e3"
+}
