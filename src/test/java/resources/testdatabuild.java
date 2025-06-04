@@ -1,9 +1,11 @@
 package resources;
 
+import com.google.gson.Gson;
 import pojo.addPlace;
 import pojo.location;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class testdatabuild {
@@ -69,5 +71,25 @@ public class testdatabuild {
                 "    \"place_id\":\""+place_id+"\"\n" +
                 "}\n";
         return delbody;
+    }
+
+    public static String addLibraryBook(String name, String aisle, String author) throws Exception {
+
+        excelUtilities ex = new excelUtilities();
+
+        ArrayList<String> l = ex.getData(name,aisle, author);
+
+            HashMap<String,Object> map   = new HashMap();
+            System.out.println(l);
+            map.put("name",l.get(1));
+            map.put("isbn","bcd");
+            map.put("aisle",l.get(2));
+            map.put("author",l.get(3));
+//            for nested JSON
+//            HashMap<String,Object> map1 = new HashMap<String,Object>();
+//            map1.put("lat", -38.389494);
+//            map1.put("lng", 33.429362);
+//            map.put("location", map1);
+        return new Gson().toJson(map);
     }
 }

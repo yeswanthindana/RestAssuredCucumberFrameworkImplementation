@@ -43,7 +43,8 @@ public class utilities {
         req = new RequestSpecBuilder()
                 .addFilter(RequestLoggingFilter.logRequestTo(stream))
                 .addFilter(ResponseLoggingFilter.logResponseTo(stream))
-                .setBaseUri(getGlobalValue("baseURL"))
+             //   .setBaseUri(getGlobalValue("baseURL"))
+                .setBaseUri(getGlobalValue("LibraryBaseURL"))
                 .setContentType(ContentType.JSON)
                 .build();
 
@@ -84,6 +85,7 @@ public class utilities {
     }
 
     public static void print(Object key){
+
         System.out.println(key);
     }
 }

@@ -37,6 +37,25 @@ public class stepdefs extends utilities {
     public static APIResources resourceAPI;
     public static String actplace_id;
 
+
+    @Given("{string} request payload with {string} {string} {string}")
+    public void request_payload_with(String string, String name, String aisle, String author) throws Exception {
+        String ab  = testdatabuild.addLibraryBook(name,aisle,author);
+        req = requestSpecification();
+        res = responseSpecification();
+
+        reqspec =
+                given()
+                        .spec(req)
+                        .body(ab)
+                        .log().body();
+
+    }
+
+
+
+
+
     @Given("{string} request Payload with name {string} {string} {string}")
     public void request_payload_with_name(String string, String name, String address, String language) throws IOException {
         sp = testdatabuild.addPlacepayloadwithexamples(name,address,language);
