@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -36,18 +37,39 @@ public class stepdefs extends utilities {
     public static JsonPath js ;
     public static APIResources resourceAPI;
     public static String actplace_id;
+    public static String body;
+
+    @ParameterType("true|false")
+    public Boolean booleanValue(String value) {
+        return Boolean.valueOf(value);
+    }
+
+
+    @Given("{string} request payload with {int} {int} {int} {string} {string} {string}")
+    public void request_payload_with_true(String string, Integer id, Integer petId, Integer quantity, String shipDate, String status, String complete) throws  Exception{
+        body = testdatabuild.createOrder(id, petId, quantity, shipDate, status, complete);
+        req = requestSpecification();
+        res = responseSpecification();
+
+        reqspec = given()
+                .spec(req)
+                .body(body)
+                .log().body();
+
+
+    }
 
 
     @Given("{string} request payload with {string} {string} {string}")
     public void request_payload_with(String string, String name, String aisle, String author) throws Exception {
-        String ab  = testdatabuild.addLibraryBook(name,aisle,author);
+        body  = testdatabuild.addLibraryBook(name,aisle,author);
         req = requestSpecification();
         res = responseSpecification();
 
         reqspec =
                 given()
                         .spec(req)
-                        .body(ab)
+                        .body(body)
                         .log().body();
 
     }
@@ -148,7 +170,8 @@ public class stepdefs extends utilities {
     public void in_response_should_be(String key, String value) {
      //   js = new JsonPath(response.asString());
       //  assertEquals(js.get(key),value);
-        assertEquals(utilities.getSONPath(response,key),value);
+        Object act = utilities.getSONPath(response, key);
+        assertEquals(value,act.toString());
     }
 
 
@@ -192,5 +215,19 @@ public class stepdefs extends utilities {
                         .spec(req)
                         .body(delbody)
                         .log().body();
+    }
+
+
+    @Given("{string} request payload with {string}")
+    public void request_payload_with(String string, String id) throws IOException {
+       req = requestSpecification();
+       res = responseSpecification();
+
+
+       reqspec =
+       given()
+                .spec(req)
+                .pathParam("id", Integer.parseInt(id))
+                .log().all();
     }
 }

@@ -1,6 +1,7 @@
 package resources;
 
 import com.google.gson.Gson;
+import com.sun.source.doctree.SpecTree;
 import pojo.addPlace;
 import pojo.location;
 
@@ -72,6 +73,22 @@ public class testdatabuild {
                 "}\n";
         return delbody;
     }
+
+    public static String createOrder(int id, int petId, int quantity, String shipDate, String status, String complete) {
+
+        HashMap hm = new HashMap<>();
+        hm.put("id", id);
+        hm.put("petId", petId);
+        hm.put("quantity", quantity);
+        hm.put("shipDate", shipDate);
+        hm.put("status", status);
+        hm.put("complete", Boolean.valueOf(complete));
+
+        return new Gson().toJson(hm);
+
+
+    }
+
 
     public static String addLibraryBook(String name, String aisle, String author) throws Exception {
 

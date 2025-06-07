@@ -44,7 +44,7 @@ public class utilities {
                 .addFilter(RequestLoggingFilter.logRequestTo(stream))
                 .addFilter(ResponseLoggingFilter.logResponseTo(stream))
              //   .setBaseUri(getGlobalValue("baseURL"))
-                .setBaseUri(getGlobalValue("LibraryBaseURL"))
+                .setBaseUri(getGlobalValue("petStoreBaseURL"))
                 .setContentType(ContentType.JSON)
                 .build();
 
@@ -80,7 +80,8 @@ public class utilities {
                 throw new IllegalArgumentException("Response body is null or empty");
             }
             JsonPath js = new JsonPath(resp);
-            return js.get(key);
+            Object value = js.get(key);
+            return value.toString();
 
     }
 
