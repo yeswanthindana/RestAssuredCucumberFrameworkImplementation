@@ -11,7 +11,9 @@ public enum APIResources {
     deleteBook(":/Library/DeleteBook.php"),
 
     placeOrderAPI("/store/order"),
-    getOrderAPI("/store/order/{id}");
+    getOrderAPI("/store/order/{id}"),
+
+    addPetApi("/pet");
 
 
     private String resource;

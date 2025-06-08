@@ -99,10 +99,19 @@ public class stepdefs extends utilities {
     public void request_payload(String string) throws IOException {
 
         sp = testdatabuild.addPlacepayload();
+        body = testdatabuild.addPetPayload();
         req = requestSpecification();
         res = responseSpecification();
 
+        if ((string.equalsIgnoreCase("addPetApi"))){
 
+            reqspec =
+                    given()
+                            .spec(req)
+                            .body(body)
+                            .log().body();
+
+        } else {
         reqspec =
                 given()
                         .queryParam("key","qaclick123")
@@ -110,6 +119,8 @@ public class stepdefs extends utilities {
                         .body(sp)
                         .log().body();
 
+
+        }
 
     }
 

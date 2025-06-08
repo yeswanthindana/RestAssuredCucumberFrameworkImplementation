@@ -109,4 +109,25 @@ public class testdatabuild {
 //            map.put("location", map1);
         return new Gson().toJson(map);
     }
+
+    public static String addPetPayload() {
+        return "{\n" +
+                "  \"id\": 40,\n" +
+                "  \"category\": {\n" +
+                "    \"id\": 0,\n" +
+                "    \"name\": \"cat pussy\"\n" +
+                "  },\n" +
+                "  \"name\": \"dogrrrgie\",\n" +
+                "  \"photoUrls\": [\n" +
+                "    \"string\"\n" +
+                "  ],\n" +
+                "  \"tags\": [\n" +
+                "    {\n" +
+                "      \"id\": 0,\n" +
+                "      \"name\": \"baggie\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"status\": \"available\"\n" +
+                "}";
+    }
 }

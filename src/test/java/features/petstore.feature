@@ -30,3 +30,12 @@ Feature: Validating Pet - Store API Details
     When user calls "getOrderAPI" with "DELETE" https request
     Then the Response should be success with code 200
 
+
+  Scenario: Add Pet to the Store
+    Given "addPetApi" request Payload
+    When user calls "addPetApi" with "POST" https request
+    Then the Response should be success with code 200
+
+
+
+
