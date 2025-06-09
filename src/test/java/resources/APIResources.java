@@ -13,7 +13,8 @@ public enum APIResources {
     placeOrderAPI("/store/order"),
     getOrderAPI("/store/order/{id}"),
 
-    addPetApi("/pet");
+    addPetApi("/pet"),
+    getPetApi("/store/order/{id}");
 
 
     private String resource;

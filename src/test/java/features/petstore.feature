@@ -35,6 +35,20 @@ Feature: Validating Pet - Store API Details
     Given "addPetApi" request Payload
     When user calls "addPetApi" with "POST" https request
     Then the Response should be success with code 200
+    And "id" in response should be "40"
+    And "name" in response should be "dogrrrgie"
+    And "status" in response should be "available"
+    And "tags[0].id" in response should be "0"
+    And "tags[0].name" in response should be "baggie"
+
+
+  Scenario: get pet details from Store
+    Given "getPetApi" request payload with "41"
+    When user calls "getPetApi" with "GET" https request
+    Then the Response should be success with code 200
+
+
+
 
 
 
